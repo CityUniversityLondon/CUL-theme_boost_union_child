@@ -60,5 +60,17 @@ $string['gradenothidden'] = 'This grade and feedback (if present) is visible in 
 // Azureb2c single sign on swither
 $string['toggletosinglesignon'] = 'If you are a City student or staff member, please go to the <a href="#">main login page</a> to login to Moodle with your City credentials.';
 
+// Block overview custom field filter
+$string['block_overview_settings'] = 'Academic year settings';
+$string['customfield'] = 'Academic year custom field';
+$string['customfield_desc'] = 'The name of the custom field used for the academic year in my overview block';
+$string['academicyeartask'] = 'Adding academicyear custom field task';
+$string['includeaccyearsfrom'] = 'Academic year from';
+$string['includeaccyearsfrom_desc'] = 'The options which you can select the academic year from, in the my overview block';
+$string['includeaccyearsto'] = 'Academic year to';
+$string['includeaccyearsto_desc'] = 'The options which you can select the academic year to, in the my overview block';
+$string['monthtoswitchyearfilter'] = 'Month to switch filter';
+$string['monthtoswitchyearfilter_desc'] = 'Which month of the year do we switch teh filter to the correct academic year?';
+
 // Privacy API.
 $string['privacy:metadata'] = 'The Boost Union Child theme does not store any personal data about any user.';

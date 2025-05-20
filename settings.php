@@ -121,7 +121,55 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
          * EXTENSION POINT:
          * Add your Boost Union Child settings here.
          *********************************************************/
+        // Create block overview tab.
+        $tab = new admin_settingpage('theme_boost_union_child_block_overview',
+                get_string('block_overview_settings', 'theme_boost_union_child'));
 
+        $name = 'theme_boost_union_child/customfield';
+        $title = get_string('customfield', 'theme_boost_union_child');
+        $description = get_string('customfield_desc', 'theme_boost_union_child');
+        $default = 'academicyear';
+        $setting = new admin_setting_configtext($name, $title, $description, $default);
+        $tab->add($setting);
+
+        $name = 'theme_boost_union_child/includeaccyearsfrom';
+        $title = get_string('includeaccyearsfrom', 'theme_boost_union_child');
+        $description = get_string('includeaccyearsfrom_desc', 'theme_boost_union_child');
+        $default = date('y') - 1;
+        $choices = [];
+        $year = date('y');
+        for ($i=20;$i<=$year;$i++) {
+            $choices[$i] = $i;
+        }
+        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+        $tab->add($setting);
+
+        $name = 'theme_boost_union_child/includeaccyearsto';
+        $title = get_string('includeaccyearsto', 'theme_boost_union_child');
+        $description = get_string('includeaccyearsto_desc', 'theme_boost_union_child');
+        $default = date('y') + 2;
+        $choices = [];
+        $year = date('y');
+        for ($i=$year;$i<=$default;$i++) {
+            $choices[$i] = $i;
+        }
+        $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+        $tab->add($setting);
+
+        $monthchoices = [];
+        for ($m=1; $m<=12; $m++) {
+            $month = date('F', mktime(0, 0, 0, $m, 1, date('Y')));
+            $monthchoices[$month] = $month;
+        }
+        $name = 'theme_boost_union_child/monthtoswitchyearfilter';
+        $title = get_string('monthtoswitchyearfilter', 'theme_boost_union_child');
+        $description = get_string('monthtoswitchyearfilter_desc', 'theme_boost_union_child');
+        $default = 'August';
+        $setting = new admin_setting_configselect($name, $title, $description, $default, $monthchoices);
+        $tab->add($setting);
+
+        // Add tab to settings page.
+        $page->add($tab);
         // Add settings page to the admin settings category.
         $ADMIN->add('theme_boost_union', $page);
     }
