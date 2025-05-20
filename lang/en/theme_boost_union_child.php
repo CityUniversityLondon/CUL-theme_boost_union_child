@@ -52,5 +52,10 @@ $string['extrascssinheritancesetting_desc'] = 'With this setting, you control if
  * Add your language strings for your settings here.
  *************************************************************/
 
+// assign_renderer
+$string['gradehidden'] = 'This grade and feedback (if present) is hidden in the Grader Report and is not available to the student.';
+$string['gradenothidden'] = 'This grade and feedback (if present) is visible in the Grader Report and is available to the student.
+<br/>If you have anonymous marking applied, you need to select Reveal student identities to release the grade to students.';
+
 // Privacy API.
 $string['privacy:metadata'] = 'The Boost Union Child theme does not store any personal data about any user.';
