@@ -206,6 +206,11 @@
                 </a>
             {{/identityproviders}}
         </div>
+        <div id="toggleGuest">
+            <small class="text-muted">
+            {{#str}}toggletosinglesignon, theme_boost_union_child{{/str}}
+            </small>
+        </div>
     </div>
     {{/hasidentityproviders}}
     <div id="theme_boost_union-loginorder-firsttimesignup" class="theme_boost_union-loginmethod">
@@ -252,7 +257,7 @@
 </div>
 
 {{#js}}
-    document.addEventListener('DOMContentLoaded', function () {
+    require(['core/first'], function() {
         function checkHash() {
             if (location.hash === '#guest') {
                 document.body.classList.add('guestlogin');

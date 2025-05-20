@@ -57,5 +57,8 @@ $string['gradehidden'] = 'This grade and feedback (if present) is hidden in the 
 $string['gradenothidden'] = 'This grade and feedback (if present) is visible in the Grader Report and is available to the student.
 <br/>If you have anonymous marking applied, you need to select Reveal student identities to release the grade to students.';
 
+// Azureb2c single sign on swither
+$string['toggletosinglesignon'] = 'If you are a City student or staff member, please go to the <a href="#">main login page</a> to login to Moodle with your City credentials.';
+
 // Privacy API.
 $string['privacy:metadata'] = 'The Boost Union Child theme does not store any personal data about any user.';
