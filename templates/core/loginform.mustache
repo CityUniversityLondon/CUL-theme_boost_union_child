@@ -252,6 +252,22 @@
 </div>
 
 {{#js}}
+    document.addEventListener('DOMContentLoaded', function () {
+        function checkHash() {
+            if (location.hash === '#guest') {
+                document.body.classList.add('guestlogin');
+            } else {
+                document.body.classList.remove('guestlogin');
+            }
+        }
+
+        // Check the hash on page load
+        checkHash();
+
+        window.addEventListener('hashchange', function () {
+            checkHash();
+        });
+    });
     {{^error}}
         {{#autofocusform}}
             require(['core_form/events'], function(FormEvent) {
