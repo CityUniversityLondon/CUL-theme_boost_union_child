@@ -170,6 +170,37 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
 
         // Add tab to settings page.
         $page->add($tab);
+
+        // Create institutions tab.
+        $tab = new admin_settingpage('theme_boost_union_child_institutions',
+                get_string('institutions', 'theme_boost_union_child'));
+
+        //Institution logos.
+        $name = 'theme_boost_union_child/institutions';
+        $title = get_string('institutions', 'theme_boost_union_child');
+        $description = get_string('institutionsdesc', 'theme_boost_union_child');
+        $setting = new admin_setting_configtext($name, $title, $description, '');
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $tab->add($setting);
+
+        $inst = get_config('theme_boost_union_child', 'institutions');
+        $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'), 'maxfiles' => 1);
+        if ($inst) {
+            $inst_options = [];
+            $institutions = explode(',', $inst);
+            foreach($institutions as $key => $ins) {
+                $file_ins = strtolower($ins);
+                //if ($DB->record_exists('user', ['institution' => strtoupper($ins)])) {
+                    $setting = new admin_setting_configstoredfile('theme_boost_union_child/'.$file_ins, "$file_ins logo", "Logo for the $file_ins institution",
+                            $file_ins, 0, $opts);
+                    $tab->add($setting);
+                //}
+            }
+        }
+
+        // Add tab to settings page.
+        $page->add($tab);
+
         // Add settings page to the admin settings category.
         $ADMIN->add('theme_boost_union', $page);
     }

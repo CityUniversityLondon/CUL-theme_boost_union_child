@@ -56,4 +56,19 @@ class core_renderer extends \theme_boost_union\output\core_renderer {
         return false;
     }
 
+
+    /**
+     * Get the institution logo url for certain students.
+     *
+     * @return string
+     */
+    public function get_compact_logo_url($maxwidth = 300, $maxheight = 300) {
+        global $DB, $USER;
+        $inst = strtolower($DB->get_field('user', 'institution', ['id' => $USER->id]));
+        $theme = \theme_config::load('boost_union_child');
+        if ($inst && isset($theme->settings->$inst) && $theme->settings->$inst) {
+            return $theme->setting_file_url($inst, $inst);
+        }
+        return parent::get_compact_logo_url($maxwidth, $maxheight);
+    }
 }

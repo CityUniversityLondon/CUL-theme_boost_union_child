@@ -72,5 +72,9 @@ $string['includeaccyearsto_desc'] = 'The options which you can select the academ
 $string['monthtoswitchyearfilter'] = 'Month to switch filter';
 $string['monthtoswitchyearfilter_desc'] = 'Which month of the year do we switch teh filter to the correct academic year?';
 
+// Institution logo settings
+$string['institutions'] = 'Institutions';
+$string['institutionsdesc'] = 'Enter institutions for which you need individual logos delimited by comma. E.g. abc,xyz';
+
 // Privacy API.
 $string['privacy:metadata'] = 'The Boost Union Child theme does not store any personal data about any user.';
