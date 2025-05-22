@@ -28,24 +28,34 @@ namespace theme_boost_union_child\output;
 
 class core_renderer extends \theme_boost_union\output\core_renderer {
 
+    /**
+     * Called as output.city_dashboard from template.
+     *
+     * Returns content from block_dashboard in current course.
+     *
+     * @return string html for course page template
+     */
     public function city_dashboard() {
         global $COURSE, $DB, $PAGE;
+        if  (!in_array($COURSE->format, ['topics', 'weeks'])) { 
+            return '';
+        }
         if ($PAGE->url->compare(new \core\url('/course/view.php'), URL_MATCH_BASE)) {
-          $ctx = \context_course::instance($COURSE->id)->id;
-          if ($dashrecord = $DB->get_record('block_instances', [
-              'blockname' => 'dashboard',
-              'parentcontextid' => $ctx
-          ])) {
-              $block = block_instance('dashboard', $dashrecord);
-              $culcourseoverride = true;
-              $dashboard_content = $block->get_content($culcourseoverride);
-              if ($dashboard_content != null) {
-                  $culcourseblocks = $block->get_content($culcourseoverride)->text;
-              } else {
-                  $culcourseblocks = '';
-              }
-              return $culcourseblocks;
-          }
+            $ctx = \context_course::instance($COURSE->id)->id;
+            if ($dashrecord = $DB->get_record('block_instances', [
+                'blockname' => 'dashboard',
+                'parentcontextid' => $ctx
+            ])) {
+                $block = block_instance('dashboard', $dashrecord);
+                $culcourseoverride = true;
+                $dashboard_content = $block->get_content($culcourseoverride);
+                if ($dashboard_content != null) {
+                    $culcourseblocks = $block->get_content($culcourseoverride)->text;
+                } else {
+                    $culcourseblocks = '';
+                }
+                return $culcourseblocks;
+            }
         }
         return '';
     }
