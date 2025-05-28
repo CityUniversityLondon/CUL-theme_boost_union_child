@@ -36,3 +36,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+
+.rollover-student a[href*="culrollover"] {
+    display: none;
+}

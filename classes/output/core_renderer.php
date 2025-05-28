@@ -88,6 +88,38 @@ class core_renderer extends \theme_boost_union\output\core_renderer {
         return false;
     }
 
+    public function body_attributes($additionalclasses = array()) {
+        global $USER;
+
+        if (!is_array($additionalclasses)) {
+            $additionalclasses = explode(' ', $additionalclasses);
+        }
+
+        if (!$this->get_user_capability_in_any_course('moodle/course:update', $USER->id)) {
+            $additionalclasses[] = 'rollover-student';
+        }
+
+        if (has_capability('mod/assign:submit', \context_course::instance($this->page->course->id), null, false)) {
+            $additionalclasses[] = 'student';
+        }
+
+        return parent::body_attributes($additionalclasses);
+    }
+
+    /**
+     * Function that checks if users is a student in any course.
+     *
+     * @param mixed $capability user capability to check
+     * @param mixed $userid user to check capability of
+     *
+     * @return bool
+     */
+    private function get_user_capability_in_any_course($capability, $userid) {
+        global $DB;
+
+        return $DB->get_records_sql("select 1 from {role_assignments} where userid = ? and roleid in
+            (select roleid from {role_capabilities} where capability = ?) limit 1", [$userid, $capability]);
+    }
 
     /**
      * Get the institution logo url for certain students.
