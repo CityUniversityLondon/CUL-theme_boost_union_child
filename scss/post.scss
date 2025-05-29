@@ -36,7 +36,17 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+/** but stop the current course highlight from spreadnig over two lines **/
+.courseindex .courseindex-section.current .current-badge {
+  max-height: 2em;
+}
 
+/** hide a menu item from students **/
 .rollover-student a[href*="culrollover"] {
     display: none;
+}
+
+/** allow course titles on recent modules to wrap **/
+.block-recentlyaccessedcourses .course-card .coursename .text-truncate {
+  white-space: initial;
 }
