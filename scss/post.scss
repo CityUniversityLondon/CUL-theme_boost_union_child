@@ -28,6 +28,10 @@
 
 }
 
+#page-login-index #loginlogo #logoimage {
+  max-width: 130px;
+}
+
 /** wrap long activity names in courseindex drawer **/
 .courseindex-link.text-truncate {
   white-space: normal;
