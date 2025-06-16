@@ -47,7 +47,7 @@
 
 /** hide a menu item from students **/
 .rollover-student a[href*="culrollover"] {
-    display: none;
+  display: none;
 }
 
 /** allow course titles on recent modules to wrap **/
@@ -69,5 +69,167 @@
 }
 
 .path-mod-assign [data-region="grading-navigation-panel"] [data-region="user-info"] > h4 {
-   font-size: 21px;
+  font-size: 21px;
+}
+
+body, input, select, textarea{
+  font-feature-settings: "ss01" 1,"lnum" 1,"onum" 0,"pnum" 1,"tnum" 0,"liga" 1;
+}
+
+/* link styles */
+div.event-name-container .event-name a:link:not(.btn),
+div.activitytitle div.activityname a:link:not(.btn),
+div.course-description-item div.description-inner a:link:not(.btn),
+div.filemanager .fp-filename-icon a:link:not(.btn),
+li.modtype_label a:link:not(.btn):not(.dropdown-item):not(.stretched-link),
+li.modtype_bootstrapelements a:link:not(.btn):not(.dropdown-item):not(.stretched-link),
+body.path-mod-page div#page div#page-content div#region-main-box div.box a:link:not(.btn),
+body.path-mod-forum div#page div#page-content div#region-main-box div.body-content-container a:link:not(.btn),
+body.path-mod-data div#page div#page-content div#region-main-box div.data-field-html a:link:not(.btn),
+body.path-mod-book div#page div#page-content div#region-main-box div.book_content a:link:not(.btn),
+body.path-mod-glossary div#page div#page-content div#region-main-box td.entry a:link:not(.btn),
+body.path-mod-feedback div#page div#page-content div#region-main-box div.felement a:link:not(.btn),
+div.activity-header div.activity-description a:link:not(.btn),
+div.policy_document a:link:not(.btn),
+div.editor_atto_content_wrap a:link:not(.btn),
+div.modal-content div.modal-body p a:link:not(.btn),
+div.modal-content div.modal-body li a:link:not(.btn),
+body.path-admin-tool-policy div#page div#page-content div#region-main-box a:link:not(.btn) {
+  color: #006bbd;
+  border-bottom: 0.2rem solid #006bbd;
+  background-color: #fff;
+}
+/* link visited styles */
+div.event-name-container .event-name a:visited:not(.btn),
+div.activitytitle div.activityname a:visited:not(.btn),
+div.course-description-item div.description-inner a:visited:not(.btn),
+div.filemanager .fp-filename-icon a:visited:not(.btn),
+li.modtype_label a:visited:not(.btn):not(.dropdown-item):not(.stretched-link),
+li.modtype_bootstrapelements a:visited:not(.btn):not(.dropdown-item):not(.stretched-link),
+body.path-mod-page div#page div#page-content div#region-main-box div.box a:visited:not(.btn),
+body.path-mod-forum div#page div#page-content div#region-main-box div.body-content-container a:visited:not(.btn),
+body.path-mod-data div#page div#page-content div#region-main-box div.data-field-html a:visited:not(.btn),
+body.path-mod-book div#page div#page-content div#region-main-box div.book_content a:visited:not(.btn),
+body.path-mod-glossary div#page div#page-content div#region-main-box td.entry a:visited:not(.btn),
+body.path-mod-feedback div#page div#page-content div#region-main-box div.felement a:visited:not(.btn),
+div.activity-header div.activity-description a:visited:not(.btn),
+div.policy_document a:visited:not(.btn),
+div.editor_atto_content_wrap a:visited:not(.btn),
+div.modal-content div.modal-body p a:visited:not(.btn),
+div.modal-content div.modal-body li a:visited:not(.btn),
+body.path-admin-tool-policy div#page div#page-content div#region-main-box a:visited:not(.btn) {
+  color: #4c2c92;
+  background-color: #fff;
+  text-decoration: none;
+  border-bottom: 0.2rem solid #4c2c92;
+}
+/* link hover styles */
+div.event-name-container .event-name a:hover:not(.btn),
+div.activitytitle div.activityname a:hover:not(.btn),
+div.course-description-item div.description-inner a:hover:not(.btn),
+div.filemanager .fp-filename-icon a:hover:not(.btn),
+li.modtype_label a:hover:not(.btn):not(.dropdown-item):not(.stretched-link),
+li.modtype_bootstrapelements a:hover:not(.btn):not(.dropdown-item):not(.stretched-link),
+body.path-mod-page div#page div#page-content div#region-main-box div.box a:hover:not(.btn),
+body.path-mod-forum div#page div#page-content div#region-main-box div.body-content-container,
+body.path-mod-data div#page div#page-content div#region-main-box div.data-field-html a:hover:not(.btn):not(.dropdown-item),
+body.path-mod-book div#page div#page-content div#region-main-box div.book_content a:hover:not(.btn),
+body.path-mod-glossary div#page div#page-content div#region-main-box td.entry a:hover:not(.btn),
+body.path-mod-feedback div#page div#page-content div#region-main-box div.felement a:hover:not(.btn),
+div.activity-header div.activity-description a:hover:not(.btn),
+div.policy_document a:hover:not(.btn),
+div.editor_atto_content_wrap a:hover:not(.btn),
+div.modal-content div.modal-body p a:hover:not(.btn),
+div.modal-content div.modal-body li a:hover:not(.btn),
+body.path-admin-tool-policy div#page div#page-content div#region-main-box a:hover:not(.btn) {
+  color: #fff;
+  background-color: #006bbd;
+  text-decoration: none;
+  border-bottom: 0.2rem solid #006bbd;
+}
+/* link active styles */
+div.event-name-container .event-name a:active:not(.btn),
+div.activitytitle div.activityname a:active:not(.btn),
+div.course-description-item div.description-inner a:active:not(.btn),
+div.filemanager .fp-filename-icon a:active:not(.btn),
+li.modtype_label a:active:not(.btn):not(.dropdown-item):not(.stretched-link),
+li.modtype_bootstrapelements a:active:not(.btn):not(.dropdown-item):not(.stretched-link),
+body.path-mod-page div#page div#page-content div#region-main-box div.box a:active:not(.btn),
+body.path-mod-forum div#page div#page-content div#region-main-box div.body-content-container a:active:not(.btn),
+body.path-mod-data div#page div#page-content div#region-main-box div.data-field-html a:active:not(.btn),
+body.path-mod-book div#page div#page-content div#region-main-box div.book_content a:active:not(.btn),
+body.path-mod-glossary div#page div#page-content div#region-main-box td.entry a:active:not(.btn),
+body.path-mod-feedback div#page div#page-content div#region-main-box div.felement a:active:not(.btn),
+div.activity-header div.activity-description a:active:not(.btn),
+div.policy_document a:active:not(.btn),
+div.editor_atto_content_wrap a:active:not(.btn),
+div.modal-content div.modal-body p a:active:not(.btn),
+div.modal-content div.modal-body li a:active:not(.btn),
+body.path-admin-tool-policy div#page div#page-content div#region-main-box a:active:not(.btn) {
+  color: #fff;
+  background-color: #006bbd;
+  text-decoration: none;
+  outline-color: #0c0c0e;
+  outline-offset: 0.15rem;
+  outline-style: solid;
+  outline-width: 0.125rem;
+  border: none;
+  box-shadow: none;
+}
+/* link focus styles */
+div.event-name-container .event-name a:focus:not(.btn),
+div.activitytitle div.activityname a:focus:not(.btn),
+div.course-description-item div.description-inner a:focus:not(.btn),
+div.filemanager .fp-filename-icon a:focus:not(.btn),
+li.modtype_label a:focus:not(.btn),
+li.modtype_bootstrapelements a:focus:not(.btn),
+body.path-mod-page div#page div#page-content div#region-main-box div.box a:focus:not(.btn),
+body.path-mod-forum div#page div#page-content div#region-main-box div.body-content-container a:focus:not(.btn),
+body.path-mod-data div#page div#page-content div#region-main-box div.data-field-html a:focus:not(.btn),
+body.path-mod-book div#page div#page-content div#region-main-box div.book_content a:focus:not(.btn),
+body.path-mod-glossary div#page div#page-content div#region-main-box td.entry a:focus:not(.btn),
+body.path-mod-feedback div#page div#page-content div#region-main-box div.felement a:focus:not(.btn),
+div.activity-header div.activity-description a:focus:not(.btn),
+div.policy_document a:focus:not(.btn),
+div.editor_atto_content_wrap a:focus:not(.btn),
+div.modal-content div.modal-body p a:focus:not(.btn),
+div.modal-content div.modal-body li a:focus:not(.btn),
+body.path-admin-tool-policy div#page div#page-content div#region-main-box a:focus:not(.btn) {
+  color: #fff;
+  background-color: #006bbd;
+  text-decoration: none;
+  outline-color: #0c0c0e;
+  outline-offset: 0.15rem;
+  outline-style: solid;
+  outline-width: 0.125rem;
+  border: none;
+  box-shadow: none;
+}
+
+.course-section .sectionname > a:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  text-decoration-thickness: 0.125em;
+}
+.activity-item .activity-name-area .activityname .inplaceeditable .quickeditlink {
+  border-bottom: none;
+}
+
+.activityiconcontainer.activityiconcontainer:not(.isbranded) .activityicon:not(.nofilter), .activityiconcontainer.activityiconcontainer:not(.isbranded) .icon:not(.nofilter),
+.local_culcourse_dashboard.dash--panel.activities-wrap .dash--link .icon.iconsmall {
+  filter: grayscale(1);
+}
+
+.activityiconcontainer.isbranded.modicon_h5pactivity {
+  filter: grayscale(1);
+}
+li.activity.modtype_hsuforum .activityiconcontainer,
+.modchoosercontainer div[data-internal="hsuforum"] .modicon_hsuforum {
+  filter: none;
+}
+
+.login-container .login-logo {
+  max-width: 150px;
+  margin: auto;
+  margin-bottom: 30px;
 }
