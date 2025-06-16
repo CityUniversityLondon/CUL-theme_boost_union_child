@@ -198,10 +198,8 @@
             <h2 class="login-heading">{{#str}} potentialidps, auth {{/str}}</h2>
             {{/showidploginintro}}
             {{#identityproviders}}
-                <a class="btn login-identityprovider-btn btn-block btn-secondary" href="{{url}}">
-                    {{#iconurl}}
-                        <img src="{{iconurl}}" alt="" width="24" height="24"/>
-                    {{/iconurl}}
+                <a class="btn login-identityprovider-btn btn-block btn-primary" href="{{url}}">
+                    {{#iconurl}}{{/iconurl}}
                     {{name}}
                 </a>
             {{/identityproviders}}
@@ -248,7 +246,7 @@
             </div>
             <div class="divider border-start align-self-center mx-3"></div>
         {{/languagemenu}}
-        <button type="button" class="btn btn-secondary" {{!
+        <button type="button" class="btn btn-link" {{!
         }} data-modal="alert"{{!
         }} data-modal-title-str='["cookiesenabled", "core"]' {{!
         }} data-modal-content-str='["cookiesenabled_help_html", "core"]'{{!
