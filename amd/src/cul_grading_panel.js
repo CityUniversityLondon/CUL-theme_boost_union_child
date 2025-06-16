@@ -17,7 +17,6 @@
  * Javascript controller for the "Grading" panel at the right of the page.
  *
  * @module     theme_boost_union_child/grading_panel
- * @package    theme_boost_union_child
  * @class      GradingPanel
  * @copyright  2017 Amanda Doughty
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
