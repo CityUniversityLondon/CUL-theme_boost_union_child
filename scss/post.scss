@@ -54,3 +54,16 @@
 .block-recentlyaccessedcourses .course-card .coursename .text-truncate {
   white-space: initial;
 }
+
+/** restyle category name in various course card locations **/
+.course-info-container.card-body .coursename + div {
+  position: absolute;
+  top: 10px;
+  white-space: nowrap;
+  @extend .badge;
+  @extend .badge-primary;
+  color: #fff !important; // to beat text-muted's specificity.
+  span.categoryname {
+    color: #fff;
+  }
+}
