@@ -133,3 +133,12 @@
         {{/welcomemessage}}
     </div>
 </header>
+{{#js}}
+    const modulenameinbreadcrumb = 'body:not(.path-question-type):not(#page-block-quickmail) ol.breadcrumb > li.breadcrumb-item:first-child > a';
+
+    document.querySelectorAll(modulenameinbreadcrumb).forEach(link => {
+        link.textContent = 'Module';
+        link.setAttribute('aria-label', 'module');
+        link.setAttribute('title', 'module');
+    });
+{{/js}}
