@@ -28,9 +28,22 @@
  * @return bool
  */
 function xmldb_theme_boost_union_child_install() {
-    global $CFG;
-    $parenttheme = 'theme_boost_union';    
+    global $CFG, $DB;
+    
+    // Don't send course welcome messages, see ISSUE 12277 for more info..
+    set_config('sendcoursewelcomemessage', 0, 'enrol_manual');
 
+    // Set default course format for new courses to 'topics' aka Custom Sections.
+    set_config('format', 'topics', 'moodlecourse');
+
+    // Convert exsting culcourse format courses to use topics format.
+    $count = $DB->count_records('course', array('format' => 'culcourse'));
+    if ($count) {
+        $DB->set_field('course', 'format', 'topics', array('format' => 'culcourse'));
+    }
+
+    // Update theme settings in parent and child theme.
+    $parenttheme = 'theme_boost_union';    
     $no = 'no';
     $yes = 'yes';
 
@@ -94,7 +107,12 @@ href="https://moodle4.city.ac.uk/admin/tool/policy/view.php?policyid=1">Cookies<
     }
 
     $childtheme = 'theme_boost_union_child';    
+    set_config('customfield', 'academicyear', $childtheme);
+    set_config('includeaccyearsfrom', '24', $childtheme);
+    set_config('includeaccyearsto', '26', $childtheme);
+    set_config('monthtoswitchyearfilter', 'August', $childtheme);
     set_config('institutions', 'BBBSCH,LLILAW', $childtheme);
+
     // Update default filerecord to $childthame.
     $filerecord->component = $childtheme;
 
