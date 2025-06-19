@@ -234,3 +234,8 @@ li.activity.modtype_hsuforum .activityiconcontainer,
   margin: auto;
   margin-bottom: 30px;
 }
+
+// Hide the course image on format_grid section pages, ISSUE 12257..
+.format-grid#page-course-view-section-grid #courseheaderimage {
+  display: none;
+}
