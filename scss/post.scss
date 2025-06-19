@@ -215,7 +215,8 @@ body.path-admin-tool-policy div#page div#page-content div#region-main-box a:focu
   border-bottom: none;
 }
 
-.activityiconcontainer.activityiconcontainer:not(.isbranded) .activityicon:not(.nofilter), .activityiconcontainer.activityiconcontainer:not(.isbranded) .icon:not(.nofilter),
+.activityiconcontainer.activityiconcontainer:not(.isbranded) .activityicon:not(.nofilter),
+.activityiconcontainer.activityiconcontainer:not(.isbranded) .icon:not(.nofilter),
 .local_culcourse_dashboard.dash--panel.activities-wrap .dash--link .icon.iconsmall {
   filter: grayscale(1);
 }
