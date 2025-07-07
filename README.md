@@ -200,3 +200,5 @@ The copyright of this boilerplate is held by\
 Moodle an Hochschulen e.V.
 
 Individual copyrights of individual developers are tracked in PHPDoc comments and Git commits.
+
+small change to prompt git submodule fix
