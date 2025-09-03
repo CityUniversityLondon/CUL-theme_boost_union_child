@@ -52,6 +52,8 @@ $string['extrascssinheritancesetting_desc'] = 'With this setting, you control if
  * Add your language strings for your settings here.
  *************************************************************/
 
+//Disclaimer on grade report page.
+$string['gradebookdisclaimer'] = 'In accordance with City St George’s, University of London policy, any marks received are provisional, subject to consideration by the Assessment board and approval by Senate.';
 // assign_renderer
 $string['gradehidden'] = 'This grade and feedback (if present) is hidden in the Grader Report and is not available to the student.';
 $string['gradenothidden'] = 'This grade and feedback (if present) is visible in the Grader Report and is available to the student.
