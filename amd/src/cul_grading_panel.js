@@ -62,7 +62,7 @@ define(['jquery', 'core/yui', 'core/notification', 'core/templates', 'core/fragm
         var gradingform = $('.gradingform');
 
         // Tell behat to back off too.
-        window.M.util.js_pending('theme-cul_theme_boost_union_child-loading-grade-alert');
+        window.M.util.js_pending('theme-boost-union-child-loading-grade-alert');
 
         // Update the page.
         if (this._lastUserId > 0) {
@@ -78,13 +78,13 @@ define(['jquery', 'core/yui', 'core/notification', 'core/templates', 'core/fragm
                 this._nicePrependGradeAlertContents(gradingform, html, js)
                 .done(function() {
                     // Tell behat we are friends again.
-                    window.M.util.js_complete('theme-theme_boost_union_child-loading-grade-alert');
+                    window.M.util.js_complete('theme-boost-union-child-loading-grade-alert');
                 }.bind(this))
                 .fail(notification.exception);
             }.bind(this)).fail(notification.exception);
         } else {
             // Tell behat we are friends again.
-            window.M.util.js_complete('theme-theme_boost_union_child-loading-grade-alert');
+            window.M.util.js_complete('theme-boost-union-child-loading-grade-alert');
         }
     };
 
